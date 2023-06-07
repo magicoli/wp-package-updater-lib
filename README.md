@@ -13,7 +13,10 @@ To get automatic updates from your plugin, run:
 
 ```bash
 composer require magicoli/wp-package-updater-lib
+php vendor/magicoli/wp-package-updater-lib/install.php
 ```
+
+This will get the package and install needed libraries in lib/wp-package-updater-lib/
 
 Then in your main plugin file, add the following code:
 
@@ -22,9 +25,14 @@ Then in your main plugin file, add the following code:
 $wppul_server = 'https://magiiic.com';
 $wppul_licence_required = false;
 
-// Include the shared library
+// Use autoload to load library
 require_once 'vendor/autoload.php';
-// require_once( 'lib/wp-package-updater-lib.php';
+```
+
+Alternatively you can load the library directly, without autoload
+
+```php
+require_once( 'lib/wp-package-updater-lib/wp-package-updater-lib.php' );
 ```
 
 The `$wppul_server` variable will be unset by the library afterwards to prevent conflicts with any other plugin so it is not safe to use inside you plugin.
