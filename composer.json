@@ -29,6 +29,7 @@
   ],
   "scripts": {
     "post-update-cmd": [
+      "echo RUNNING POST-UPDATE FROM LIBRARY",
       "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/plugin-update-checker/ lib/plugin-update-checker/",
       "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/wp-package-updater/ lib/wp-package-updater/"
     ]
