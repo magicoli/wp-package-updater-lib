@@ -1,6 +1,6 @@
 <?php
 
-namespace Magicoli\WpPackageUpdaterLib;
+namespace MagicOli\WpPackageUpdaterLib;
 
 require_once __DIR__ . '/wp-package-updater-lib.php';
 

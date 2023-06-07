@@ -1,8 +1,14 @@
 <?php
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-    die;
+namespace MagicOli\WpPackageUpdaterLib;
+
+class ScriptHandler
+{
+    public static function showInstructions()
+    {
+        echo "Thank you for installing MyPackage! Here are the instructions...\n";
+        // Provide any necessary instructions to the user
+    }
 }
 
 // Enable plugin updates only if $wppul_server variable is set
