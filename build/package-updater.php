@@ -1,4 +1,13 @@
 <?php
+/**
+ * WP Package Updater - composer-ready library.
+ *
+ * This is a set of all needed libraries to include in a plugin, to get
+ * automatic  updates from Anexandre Froger's [WP Plugin Update
+ * Server](https://github.com/froger-me/wp-plugin-update-server).
+ *
+ * Version: 0.1.1
+ */
 
 namespace MagicOli\WpPackageUpdaterLib;
 
