@@ -4,9 +4,7 @@
   "type": "library",
   "license": "AGPL-3.0-or-later",
   "autoload": {
-    "psr-4": {
-      "MagicOli\\WpPackageUpdaterLib\\": "build"
-    }
+    "files": [ "build/package-updater.php" ]
   },
   "authors": [
     {
