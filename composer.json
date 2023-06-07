@@ -3,6 +3,7 @@
   "description": "Composer package for wp-package-updater library.",
   "type": "library",
   "license": "AGPL-3.0-or-later",
+  "stable": "0.1.0",
   "autoload": {
     "psr-4": {
       "MagicOli\\WpPackageUpdaterLib\\": "build"
