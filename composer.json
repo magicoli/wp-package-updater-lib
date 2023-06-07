@@ -28,8 +28,8 @@
     }
   ],
   "scripts": {
-    "post-package-install": "MyVendor\\MyPackage\\ScriptHandler::showInstructions",
-    "post-package-update": "MyVendor\\MyPackage\\ScriptHandler::showInstructions",
+    "post-package-install": "Magicoli\\WpPackageUpdaterLib\\ScriptHandler::showInstructions",
+    "post-package-update": "Magicoli\\WpPackageUpdaterLib\\ScriptHandler::showInstructions",
     "post-update-cmd": [
       "echo RUNNING post-update-cmd",
       "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/plugin-update-checker/ lib/plugin-update-checker/",
