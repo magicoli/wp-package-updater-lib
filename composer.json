@@ -5,7 +5,7 @@
   "license": "AGPL-3.0-or-later",
   "autoload": {
     "psr-4": {
-      "Magicoli\\WpPackageUpdaterLib\\": "src/"
+      "Magicoli\\WpPackageUpdaterLib\\": "lib/wp-package-updater-lib"
     }
   },
   "authors": [
@@ -29,8 +29,8 @@
   ],
   "scripts": {
     "post-update-cmd": [
-      "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/plugin-update-checker/ plugin-update-checker/",
-      "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/wp-package-updater/ wp-package-updater/"
+      "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/plugin-update-checker/ lib/plugin-update-checker/",
+      "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/wp-package-updater/ lib/wp-package-updater/"
     ]
   },
   "require-dev": {

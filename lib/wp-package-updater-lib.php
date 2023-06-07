@@ -9,7 +9,7 @@ if ( ! defined( 'WPINC' ) ) {
 if ( isset( $wppul_server ) ) {
 
     // Include the library file
-    require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+    require_once plugin_dir_path( __FILE__ ) . 'wp-package-updater/class-wp-package-updater.php';
 
     // Instantiate WP_Package_Updater class
     new WP_Package_Updater(
