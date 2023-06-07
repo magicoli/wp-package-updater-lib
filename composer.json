@@ -3,9 +3,6 @@
   "description": "Composer package for wp-package-updater library.",
   "type": "library",
   "license": "AGPL-3.0-or-later",
-  "autoload": {
-    "files": [ "build/package-updater.php" ]
-  },
   "authors": [
     {
       "name": "Magiiic"

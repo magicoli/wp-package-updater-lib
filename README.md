@@ -31,24 +31,6 @@ The `$wppul_server` variable will be unset by the library afterwards to prevent 
 
 WP Plugin Update Server allows to provide automatic updates for plugins hosted on github or
 
-Alternatively you can load the library with autoload (in this case, you need to make sure that vendor/autoload.php and vendor/magicoli are not excluded from your public releases):
-
-```bash
-composer require magicoli/wp-package-updater-lib
-# No need to run install.php for autoload
-```
-
-In your main plugin file:
-
-```php
-// Adjust with your plugin uddate server URL
-$wppul_server = 'https://magiiic.com';
-$wppul_licence_required = false; // optional
-
-// Make sure the variable are set before autoload is launched.
-require_once 'vendor/autoload.php';
-```
-
 ## Original README
 
 ### Description
