@@ -9,16 +9,14 @@ Requirements:
 - WP Plugin Update Server must be installed and configured
 - Your package must be configured in WP Plugin Update Server
 
-To get automatic updates from your plugin, run:
+Get the package and install needed libraries in lib/wp-package-updater-lib
 
 ```bash
 composer require magicoli/wp-package-updater-lib
 php vendor/magicoli/wp-package-updater-lib/install.php
 ```
 
-This will get the package and install needed libraries in lib/wp-package-updater-lib/
-
-Then in your main plugin file, add the following code:
+Include the following in your main plugin file:
 
 ```php
 // Adjust with your plugin uddate server URL
@@ -29,15 +27,27 @@ $wppul_licence_required = false;
 require_once( 'lib/wp-package-updater-lib/package-updater.php' );
 ```
 
-Alternatively you can load the library directly, without autoload
-
-```php
-require_once 'vendor/autoload.php';
-```
-
 The `$wppul_server` variable will be unset by the library afterwards to prevent conflicts with any other plugin so it is not safe to use inside you plugin.
 
 WP Plugin Update Server allows to provide automatic updates for plugins hosted on github or
+
+Alternatively you can load the library with autoload (in this case, you need to make sure that vendor/autoload.php and vendor/magicoli are not excluded from your public releases):
+
+```bash
+composer require magicoli/wp-package-updater-lib
+# No need to run install.php for autoload
+```
+
+In your main plugin file:
+
+```php
+// Adjust with your plugin uddate server URL
+$wppul_server = 'https://magiiic.com';
+$wppul_licence_required = false; // optional
+
+// Make sure the variable are set before autoload is launched.
+require_once 'vendor/autoload.php';
+```
 
 ## Original README
 
