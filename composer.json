@@ -30,6 +30,8 @@
     }
   ],
   "scripts": {
+    "post-package-install": "MagicOli\\WpPackageUpdaterLib\\ScriptHandler::showInstructions",
+    "post-package-update": "MagicOli\\WpPackageUpdaterLib\\ScriptHandler::showInstructions",
     "post-update-cmd": [
       "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/plugin-update-checker/ build/plugin-update-checker/",
       "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/wp-package-updater/ build/wp-package-updater/"
