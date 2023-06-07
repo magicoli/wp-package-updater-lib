@@ -1,0 +1,29 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "2e86c6b593edadf22df83efdb97137ee",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "froger-me/wp-plugin-update-server",
+            "version": "1.4.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/froger-me/wp-plugin-update-server",
+                "reference": "master"
+            },
+            "type": "library"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
