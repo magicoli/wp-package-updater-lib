@@ -2,7 +2,7 @@
   "name": "magicoli/wp-package-updater-lib",
   "description": "Composer package for wp-package-updater library.",
   "type": "library",
-  "license": "GPL-v3",
+  "license": "AGPL-3.0-or-later",
   "autoload": {
     "psr-4": {
       "Magicoli\\WpPackageUpdaterLib\\": "src/"
