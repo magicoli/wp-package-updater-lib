@@ -1,10 +1,5 @@
 <?php
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-    die;
-}
-
 // Enable plugin updates only if $wppul_server variable is set
 if ( isset( $wppul_server ) ) {
 
@@ -16,7 +11,7 @@ if ( isset( $wppul_server ) ) {
         $wppul_server,
         wp_normalize_path( plugin_dir_path( __FILE__ ) . 'project-donations-wc.php' ),
         wp_normalize_path( plugin_dir_path( __FILE__ ) ),
-        isset($wppul_licence_required) ? $wppul_licence_required : false,
+        isset($wppul_licence_required) ? $wppul_licence_required : false
     );
 
     // Unset the variable after it has been used
