@@ -6,7 +6,7 @@
  * automatic  updates from Anexandre Froger's [WP Plugin Update
  * Server](https://github.com/froger-me/wp-plugin-update-server).
  *
- * Version: 0.1.4
+ * Version: 0.1.5
  */
 
 namespace MagicOli\WpPackageUpdaterLib;
@@ -14,6 +14,7 @@ namespace MagicOli\WpPackageUpdaterLib;
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
+error_log('Been here ' . __FILE__);
 
 // Enable plugin updates only if $wppul_server variable is set
 if ( isset( $wppul_server ) ) {
