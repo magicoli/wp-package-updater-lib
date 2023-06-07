@@ -1,4 +1,6 @@
 .DS_Store
+*~
+#*#
 phpcs.xml
 phpunit.xml
 Thumbs.db
@@ -7,5 +9,6 @@ node_modules/
 *.sql
 *.tar.gz
 *.zip
-vendor/
 bin/svnrc
+/vendor/*
+!vendor/autoload.php

@@ -4,9 +4,9 @@
   "type": "library",
   "license": "GPL-v3",
   "autoload": {
-    "files": [
-      "wp-package-updater-lib.php"
-    ]
+    "psr-4": {
+      "Magicoli\\WpPackageUpdaterLib\\": "src/"
+    }
   },
   "authors": [
     {
