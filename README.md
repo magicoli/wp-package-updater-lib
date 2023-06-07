@@ -26,13 +26,13 @@ $wppul_server = 'https://magiiic.com';
 $wppul_licence_required = false;
 
 // Use autoload to load library
-require_once 'vendor/autoload.php';
+require_once( 'lib/wp-package-updater-lib/package-updater.php' );
 ```
 
 Alternatively you can load the library directly, without autoload
 
 ```php
-require_once( 'lib/wp-package-updater-lib/wp-package-updater-lib.php' );
+require_once 'vendor/autoload.php';
 ```
 
 The `$wppul_server` variable will be unset by the library afterwards to prevent conflicts with any other plugin so it is not safe to use inside you plugin.

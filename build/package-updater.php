@@ -1,5 +1,11 @@
 <?php
 
+namespace MagicOli\WpPackageUpdaterLib;
+
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 // Enable plugin updates only if $wppul_server variable is set
 if ( isset( $wppul_server ) ) {
 

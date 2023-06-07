@@ -5,7 +5,7 @@
   "license": "AGPL-3.0-or-later",
   "autoload": {
     "psr-4": {
-      "MagicOli\\WpPackageUpdaterLib\\": "src/"
+      "MagicOli\\WpPackageUpdaterLib\\": "build"
     }
   },
   "authors": [
@@ -13,6 +13,8 @@
       "name": "Magiiic"
     }
   ],
+  "warning": "Warning message",
+  "info": "Info message",
   "repositories":[
     {
       "type": "package",
@@ -28,12 +30,9 @@
     }
   ],
   "scripts": {
-    "post-package-install": "MagicOli\\WpPackageUpdaterLib\\ScriptHandler::showInstructions",
-    "post-package-update": "MagicOli\\WpPackageUpdaterLib\\ScriptHandler::showInstructions",
     "post-update-cmd": [
-      "echo RUNNING post-update-cmd",
-      "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/plugin-update-checker/ src/plugin-update-checker/",
-      "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/wp-package-updater/ src/wp-package-updater/"
+      "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/plugin-update-checker/ build/plugin-update-checker/",
+      "rsync --delete -Wavz vendor/froger-me/wp-plugin-update-server/wp-plugin-update-server/integration-examples/dummy-plugin/lib/wp-package-updater/ build/wp-package-updater/"
     ]
   },
   "require-dev": {
