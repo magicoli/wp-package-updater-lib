@@ -7,8 +7,6 @@
  * Server](https://github.com/froger-me/wp-plugin-update-server).
  */
 
-namespace MagicOli\WpPackageUpdaterLib;
-
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
