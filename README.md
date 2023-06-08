@@ -2,18 +2,30 @@
 
 This is a set of all needed libraries to include in a plugin, to get automatic updates from Anexandre Froger's [WP Plugin Update Server](https://github.com/froger-me/wp-plugin-update-server).
 
-**Warning**: TBH, I didn't test it yet, the purpose of the first commit is to make the necessary tests. I hope I remember to remove this line afterwards.
-
 Requirements:
 
 - WP Plugin Update Server must be installed and configured
 - Your package must be configured in WP Plugin Update Server
+- Composer must be configured (or run `composer init --type=wordpress-plugin` from your plugin root folder)
 
-Get the package and install needed libraries in lib/wp-package-updater-lib
+Install from command-line:
 
 ```bash
+# Install package with composer
 composer require magicoli/wp-package-updater-lib
+# Add library to lib/wp-package-updater-lib
 php vendor/magicoli/wp-package-updater-lib/install.php
+# You should run install.php again each time the package is updated
+```
+
+To keep library up to date with `composer update`, insert this in composer.json:
+
+```json
+"scripts": {
+  "post-update-cmd": [
+    "php vendor/magicoli/wp-package-updater-lib/install.php"
+  ]
+}
 ```
 
 Include the following in your main plugin file:
