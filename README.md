@@ -5,8 +5,8 @@ This is a set of all needed libraries to include in a plugin, to get automatic u
 Requirements:
 
 - WP Plugin Update Server must be installed and configured
-- Your package must be configured in WP Plugin Update Server
-- Composer must be configured (or run `composer init --type=wordpress-plugin` from your plugin root folder)
+- Your plugin must appear in WP Plugin Update Server packages list
+- Composer must be configured (if not run `composer init --type=wordpress-plugin` from your plugin root folder)
 
 Install from command-line:
 
@@ -33,15 +33,13 @@ Include the following in your main plugin file:
 ```php
 // Adjust with your plugin uddate server URL
 $wppul_server = 'https://magiiic.com';
-$wppul_licence_required = false;
+$wppul_licence_required = false; // optional, set to true if licence is set in WPPUS
 
 // Use autoload to load library
-require_once( 'lib/wp-package-updater-lib/package-updater.php' );
+require_once( __DIR__ . '/lib/wp-package-updater-lib/package-updater.php' );
 ```
 
-The `$wppul_server` variable will be unset by the library afterwards to prevent conflicts with any other plugin so it is not safe to use inside you plugin.
-
-WP Plugin Update Server allows to provide automatic updates for plugins hosted on github or
+The `$wppul_server` variable will be unset by the library afterwards to prevent conflicts with any other plugin so it is not safe to use it for other purposes.
 
 ## Original README
 
