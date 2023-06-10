@@ -10,5 +10,4 @@ node_modules/
 *.tar.gz
 *.zip
 bin/svnrc
-/vendor/*
-!vendor/autoload.php
+/vendor/
