@@ -36,7 +36,7 @@ $wppul_server = 'https://magiiic.com';
 $wppul_licence_required = false; // optional, set to true if licence is set in WPPUS
 
 // Use autoload to load library
-require_once( __DIR__ . '/lib/wp-package-updater-lib/package-updater.php' );
+require_once( __DIR__ . '/lib/package-updater.php' );
 ```
 
 The `$wppul_server` variable will be unset by the library afterwards to prevent conflicts with any other plugin so it is not safe to use it for other purposes.

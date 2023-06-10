@@ -1,7 +1,7 @@
 <?php
 
 $vendorDir = __DIR__ . '/build/'; // Path to the vendor directory
-$libDir    = dirname( dirname( dirname( __DIR__ ) ) ) . '/lib/wp-package-updater-lib/'; // Path to the target directory for library files
+$libDir    = dirname( dirname( dirname( __DIR__ ) ) ) . '/lib/'; // Path to the target directory for library files
 
 createDirectory( $libDir );
 syncDirectory( $vendorDir, $libDir );

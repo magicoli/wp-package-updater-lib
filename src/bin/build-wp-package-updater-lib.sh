@@ -39,7 +39,7 @@ phpcs -p . --standard=PHPCompatibility --ignore=$ignore,*js,*css --runtime-set t
 
 if [ "$commitversion" != "" -a "$commitversion" != "$version" ]
 then
-  read -p "Ammend and tag commit $commitversion? [y/N] " resp
+  read -p "Ammend commit and tag $commitversion? [y/N] " resp
   if [ "$resp" = "yes" -o "$resp" = "y" -o "$resp" = "Y" ]
   then
     sed -i -E -e "s/(define[[:blank:]]*\(.*_VERSION',[[:blank:]]*').* *\);/\\1$commitversion');/" \
