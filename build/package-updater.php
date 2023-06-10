@@ -11,7 +11,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-( ! defined( 'WPPUL_VERSION' ) ) && define( 'WPPUL_VERSION', '1.0.2-1-g0bf568c' );
+( ! defined( 'WPPUL_VERSION' ) ) && define( 'WPPUL_VERSION', '1.0.4');
 
 // Enable plugin updates only if $wppul_server variable is set
 $trace = debug_backtrace();

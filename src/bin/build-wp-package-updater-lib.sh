@@ -3,6 +3,15 @@
 ignore="vendor/*,node_modules/*,build/plugin-update-checker,build/wp-package-updater,sources/,*.asset.php,*/*/*.asset.php,*.map,includes/fullcalendar/fullcalendar.*"
 
 version=$(git describe --tags | sed "s/^v//")
+
+changes=$(git update-index --refresh)
+if [ "$changes" ]
+then
+  echo "updates $changes"
+else
+  echo "no updates"
+fi
+
 echo "# version $version"
 sed -i -E -e "s/(define[[:blank:]]*\(.*_VERSION',[[:blank:]]*').* *\);/\\1$version');/" \
 -e "s/^([[:blank:]\*;]*Version[[:blank:]]*:[[:blank:]]*).*/\\1$version'/" \
@@ -11,7 +20,6 @@ build/package-updater.php
 
 commitsubject=$(git log -1 --pretty=%B)
 commitversion=$(git log -1 --pretty=%B | grep -E "^v([0-9]+\.)+[0-9]+" | cut -d " " -f 1 | sed "s/^v//")
-
 PGM=$(basename $0)
 minphp=$(minphp 2>/dev/null)
 [ "$minphp" =  "" ] && minphp=$(grep "Requires PHP:" readme.txt | sed "s/.*PHP: *//")
@@ -34,6 +42,9 @@ then
   read -p "Ammend and tag commit $commitversion? [y/N] " resp
   if [ "$resp" = "yes" -o "$resp" = "y" -o "$resp" = "Y" ]
   then
+    sed -i -E -e "s/(define[[:blank:]]*\(.*_VERSION',[[:blank:]]*').* *\);/\\1$commitversion');/" \
+    -e "s/^([[:blank:]\*;]*Version[[:blank:]]*:[[:blank:]]*).*/\\1$commitversion'/" \
+    build/package-updater.php
     git add -A
     git commit --amend -m "$commitsubject"
     echo tagging $commitversion >&2
